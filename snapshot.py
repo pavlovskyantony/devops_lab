@@ -17,7 +17,7 @@ def runsnapshot():
     while True:
         if config['common']['output'] == 'txt':
             with open("metrics.txt", "a+") as out:
-                out.write("Timestamp: {0} \n\n".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
+                out.write("Time: {0} \n\n".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
                 out.write("Hostname: {0} \n".format(Server().overallinfo()[1]))
                 out.write("System/OS: {0} \n".format(Server().overallinfo()[0]))
                 out.write("Platform: {0} \n".format(Server().overallinfo()[2]))
