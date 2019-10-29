@@ -6,7 +6,7 @@ import datetime
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--v", help="Shows version", action="store_true")
-parser.add_argument("--c", help="Number of pull requests. Default count is 5. Set --c=<number>", type=int)
+parser.add_argument("--c", help="Number of pull requests. Default is 5. Set --c=<num>", type=int)
 parser.add_argument("--u", help="Shows information about user", action="store_true")
 parser.add_argument("--w", help="Shows week number", action="store_true")
 parser.add_argument("--d", help="Shows day of week", action="store_true")
@@ -18,7 +18,8 @@ args = parser.parse_args()
 usr = input("Enter the name: ")
 pwd = getpass.getpass("Enter the password: ")
 
-r = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?per_page=123', auth=(usr, pwd))
+r = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?per_page=123',
+                 auth=(usr, pwd))
 
 data = r.json()
 
