@@ -1,17 +1,15 @@
 DevOps Lab 2019 (September-December)
 
-Homework3 snapshot app
+Homework4 
 
-install:
-- You need copy required files (setup.py, snapshot.py, config.ini, LICENSE)
-- Make .whl build file (command: python setup.py bdist_wheel)
-- .whl file will compiled in dist folder
-- Install this .whl file by using pip install dist/snapshot-0.0.1-py3-none-any.whl
-- Run this application (python && import snapshot && snapshot.runsnapshot)
-- For terminate. you need press "Ctrl + D"
-- App collects metrics every 5 minutes by default. You may change this interval in config.ini file
-- All collected metrics by this app will putted in metrics.txt or metrics.json file. You may change format in config.ini file
-- metrics.txt or metrics.json will locate in directory where you run the snapshot App
+usage of application:
+- Git url - https://api.github.com/repos/alenaPy/devops_lab/pulls?per_page=123
+- Use own Github credentials
+- To see version of App and quit use python homework4.py --v
+- Default number of displayed pull requests is 5. You may also assign required number. Use --c key
+- Only key --c has Value, another keys have no values, only keys
+- In order to see help about syntax you need use: python homework4.py -h
+- To see required fields of pull requests, you need include --key parameter as a argument. For example, python homework4.py --w. 
+- If --key is't included the value will skipped (-)
 
-uninstall:
-- pip uninstall snapshot
+For instance, App will displayed all key-values - python homework4.py --u --w --d --h --s
