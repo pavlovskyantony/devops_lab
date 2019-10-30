@@ -5,7 +5,7 @@ row3 = set('zxcvbnm')
 results = []
 for w in words:
     word = set(w.lower())
-    if (word - row1) == set() or ((word - row2) == set()) or ((word - row3) == set()):
+    if word == row1 or word == row2 or word == row3:
         results.append(w)
 print(results)
 print(word)
